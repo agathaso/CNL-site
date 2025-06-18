@@ -5,15 +5,18 @@
 }
 
 @font-face {
-    font-family: "Belleza";
-    src: url(font/Belleza\,Recursive/);
+    font-family: "Recursive";
+    src: url(./fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
 }
 
 :root {
     --branco: #FFFFFF;
     --preto: #000000;
-    --verde-cnl: #9ED48F;
-    --verde-escuro: #64875B;}
+    --verde-pixelV: #00CF21;
+    --roxo-pixelV: #4700CF;
+    --Fundo-site: #F3F2F2;
+    --Contato: #E5E5E5;
+}
 
 .container-grid {
     width: 80vw;
@@ -21,14 +24,35 @@
     margin: 0 auto;
 }
 
-
-.banner img{
-    height: 80px;
-    width: 234px;
+body {
+    overflow-x: hidden;
+    background-color: var(--Fundo-site);
 }
 
-.banner{
-   background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/banner.png) ;
+.titulo {
+    display: flex;
+    font-family: "Recursive", sans-linear-bold;
+    font-weight: 600;
+    font-size: 35px;
+
+}
+
+.titulo h2 {
+    color: var(--branco);
+    margin-bottom: 0;
+    background-color: var(--roxo-pixelV);
+    border-radius: 20px;
+    padding: 10px 18px;
+
+}
+
+.titulo span {
+    color: var(--roxo-pixelV);
+    border-bottom: solid 3px var(--verde-pixelV);
+}
+
+.banner {
+    background-image: url(./imgs/Banner.png);
     height: 120vh;
     background-repeat: no-repeat;
     background-position: 0 -10px;
@@ -42,8 +66,13 @@ header {
     height: 165px;
 }
 
+header img {
+    width: 234px;
+}
+
 header .container-grid {
     height: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,46 +83,56 @@ header .container-grid {
     width: 70%;
 
     display: flex;
-    justify-content: space-between;}
+    justify-content: space-between;
+}
 
-    .menu a {
+.menu a {
     font-size: 20px;
     color: var(--branco);
-    font-family: "Belleza", Recursive;
+    font-family: "Recursive", sans-linear;
+
     text-decoration: underline transparent;
     text-decoration-thickness: 2px;
+
     transition: text-decoration 500ms ease;
 }
+
 .menu a:hover {
-    text-decoration-color: var(--branco);
+    text-decoration-color: var(--verde-pixelV);
 }
+
 .conteudo-banner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
+    justify-content: space-evenly;
+    align-items: space-between;
+
 }
 
-.kemily {
+.conteudo-banner img {
+    max-width: 380px;
+    width: 50%;
+
+}
+
+.conteudo-banner p {
+    font-size: 26px;
+    font-family: "Recursive", sans-linear;
     color: var(--branco);
-    font-size: 40px;
-    font-family: "Belleza", Recursive;
+    width: 350px;
+    margin-bottom: 100px;
 }
 
-.agatha {
-color: #879E6D;
-font-size: 60px;
-font-family: "Belleza",Recursive;
+.conteudo-banner ul {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Recursive", sans-linear-bold;
+    color: var(--verde-pixelV);
+    list-style-type: none;
+    padding: 0;
 }
 
-.jorge {
-    color: var(--branco);
-    font-size: 25px;
-    font-family: "Belleza", Recursive;
-}
 
-/* -------sobre---------- */
+/* -------------- SOBRE --------------- */
 
 #sobre {
     display: flex;
@@ -102,126 +141,49 @@ font-family: "Belleza",Recursive;
     margin-top: 120px;
     margin-bottom: 120px;
 }
+
 #sobre img {
     max-width: 460px;
     width: 40%;
     border-radius: 40px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
-#sobre h2 {
-    margin-right: 5px;
+
+#sobre p {
+    font-family: "Recursive", sans-linear;
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 30px;
 }
 
-#sobre h2 {
 
-    color: var(--branco);
-    margin-bottom: 0;
-    background-color: var(--verde-cnl);
-    border-radius: 20px;
-    padding: 10px 18px;
-}
-.titulo h2{
-    color: var(--branco);
-    margin-bottom: 0;
-    background-color: var(--verde-cnl);
-    border-radius: 20px;
-    padding: 10px 18px;
-}
-.titulo span {
-    color: var(--verde-cnl);
-}
-/* ---------- feitos------ */
-#feitos {
+/* -------------PARALLAX--------------- */
+
+
+#parallax {
+    height: 250px;
+
+    /* background-image: url(./imgs/parallax.svg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./imgs/parallax.svg);
+    background-attachment: fixed;
+    background-size: 30%;
     margin-bottom: 120px;
 }
 
-#feitoss .titulo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 55px;
-}
-
-#feitos h2 {
-    margin-left: 5px;
-    
-}
-
-.container-cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-#feitos .card {
-    width: 300px;
-    margin: 20px;
-    padding: 40px 20px;
-    border-radius: 40px;
-    background-color: #f3f2f2;
-    box-shadow: 0 4px 8px 0 lch(0% 0 0 / 0.2);
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#feitos .card h3 {
-    font-size: 24px;
-    margin: 5px 0 30px;
-    color: var(--cnl);
-    font-family: "Belleza", Recursive;
-    text-align: center;
-}
-
-#feitos .card p {
-    font-family: "Belleza", Recursive;
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-#feitos .card svg {
-    color: var(--verde-cnl);
-    height: 75px;
-}
-
-#feitos .card:hover {
-    border: solid 3px var(--verde-escuro);
-}
-
-#feitos .card:hover h3 {
-    color: var(--verde-escuro);
-}
-
-#feitos .card:hover svg {
-    fill: var(--verde-escuro);
-}
-.FotosSite img{
-max-width: 460px;
-    width: 40%;
-    border-radius: 40px;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
-    
-}
-
-
+/* ----------------SERVIÇOS--------------- */
 #servicos {
     margin-bottom: 120px;
+
 }
 
 #servicos .titulo {
-    display: flex;
     justify-content: center;
     margin-bottom: 55px;
+
 }
 
-#servicos h2 {
+#servivos {
     margin-left: 5px;
-    
 }
 
 .container-cards {
@@ -232,109 +194,95 @@ max-width: 460px;
 
     position: relative;
 }
+
+.linha-roxa {
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 125px);
+
+    height: 250px;
+    width: 100vw;
+    background: linear-gradient(0deg, rgba(36, 0, 105, 1)0%,
+            rgba(71, 0, 207, 1)100%);
+}
+
 #servicos .card {
     width: 300px;
     margin: 20px;
     padding: 40px 20px;
     border-radius: 40px;
-    background-color: #f3f2f2;
-    box-shadow: 0 4px 8px 0 lch(0% 0 0 / 0.2);
+    background-color: #F2F2F2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 }
 
 #servicos .card h3 {
     font-size: 24px;
     margin: 5px 0 30px;
-    color: var(--preto);
-    font-family: "Belleza", Recursive;
+    color: var(--roxo-pixelV);
+    font-family: "Recursive", sans-linear-bold;
     text-align: center;
+
 }
 
 #servicos .card p {
-    font-family: "Belleza", Recursive;
-    font-size: 18px;
+    font-family: "Recursive", sans-linear;
+    font: size 18px;
     margin-bottom: 20px;
     line-height: 1.5;
+
 }
 
 #servicos .card svg {
-    color: var(--preto);
+    color: var(--roxo-pixelV);
     height: 75px;
+
 }
 
 #servicos .card:hover {
-    border: solid 3px var(--verde-cnl);
+    border: solid 3px var(--verde-pixelV);
 }
 
 #servicos .card:hover h3 {
-    color: var(--verde-cnl);
+    color: var(--verde-pixelV);
 }
 
 #servicos .card:hover svg {
-    fill: var(--verde-cnl);
+    fill: var(--verde-pixelV);
 }
 
-.titulo{
-    font-size: 24px;
-    margin: 5px 0 30px;
-    color: var(--verde-cnl);
-    font-family: "Belleza", Recursive;
-    text-align: center;
-}.titulo{
-    display: flex;
-}
-.sobre span{
-    color: #000000;
-}
-.feitos{
-    display: flex;
-    justify-content: center;
+/* ------------Cases de Sucesso--------------*/
+
+#cases h2 {
+    margin-right: 5px;
 }
 
-.servicos{
+#cases {
     display: flex;
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100%;
-    
-}
-.feitos span{
-color: var(--branco);
-    margin-bottom: 0;
-    background-color: var(--verde-cnl);
-    border-radius: 20px;
-    padding: 10px 18px;
-}
-#servicos span{
-    color: #000000;
-}
-.conteudo-sobre span{
-    color: #000000;
-}
-.contato{
-    margin-bottom: 0;
-    background-color: var(--verde-cnl);
-    border-radius: 20px;
-    padding: 10px 18px;
+    gap: 50px;
+    margin-bottom: 120px;
 }
 
-.card svg{
-  width: 60px;
-  height: 60px;
-}
-.fotos img{
+#cases img {
     height: 300px;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    border-radius: 30px;
+    border-radius: 40px;
 }
+
+#meuCarrossel {
+    max-width: 1170px;
+    width: 90;
+}
+
+/* ----------------------------- Contato -------------------------- */
+
 #contato {
     text-align: center;
     padding-bottom: 100px;
@@ -362,11 +310,11 @@ color: var(--branco);
     align-items: center;
 
     border-radius: 40px;
-    background-color: var(--preto);
-    border: solid 3px var(--verde-escuro);
+    background-color: var(--Contato);
+    border: solid 3px var(--roxo-pixelV);
 
-    color: var(--branco);
-    font-family: "Belleza", Recursive;
+    color: var(--preto);
+    font-family: "Recursive", sans-linear;
     font-size: 17px;
 }
 
@@ -380,13 +328,10 @@ color: var(--branco);
     justify-content: space-between;
 
     margin-bottom: 50px;
-
 }
 
 .campo-descricao {
     width: 60%;
-
-    text-align: left;
 
     display: flex;
     flex-direction: column;
@@ -423,14 +368,14 @@ color: var(--branco);
     resize: none;
 }
 
-.campo-lable,
+.campo-label,
 .campo-descricao label {
     margin-bottom: 15px;
 }
 
 .campo input,
 .campo-descricao textarea {
-    font-family: "Belleza", Recursive;
+    font-family: "Recursive", sans liner;
     font-size: 17px;
 }
 
@@ -441,21 +386,21 @@ color: var(--branco);
 
 .campo input:focus,
 .campo-descricao textarea:focus {
-    outline: 2px solid var(--branco);
+    outline: 2px solid var(--verde-pixelV);
 }
 
 #contato form button {
     height: 40px;
     width: 60%;
 
-    background-color: var(--verde-cnl);
+    background-color: var(--roxo-pixelV);
     color: var(--branco);
 
     border: none;
     border-radius: 4px;
 
     font-size: 17px;
-    font-family: "Belleza", Recursive;
+    font-family: "Recursive", sans-linear;
     font-weight: 700;
 
     text-transform: uppercase;
@@ -466,16 +411,13 @@ color: var(--branco);
 }
 
 #contato form button:hover {
-    background-color: var(--verde-cnl);
+    background-color: var(--verde-pixelV);
+}
 
-}
-#contato span{
-    font-family: "Belleza" Recursive;
-    color: #000000;
-}
+/* ----------Footer------------- */
 footer {
     height: 250px;
-    background-image: url(./img/superficie-abstrata-e-texturas-de-parede-de-pedra-branca-de-concreta.jpg);
+    background-image: url(./imgs/footer.png);
 }
 
 footer img {
@@ -492,6 +434,7 @@ footer .container-grid {
 
 .redes-sociais {
     height: 50%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -499,9 +442,9 @@ footer .container-grid {
 }
 
 .redes-sociais p {
-    color: var(--verde-escuro);
+    color: var(--branco);
 
-    font-family: "Belleza", Recursive;
+    font-family: "Recursive", sans-linear-bold;
     font-size: 24px;
 }
 
@@ -513,23 +456,21 @@ footer .container-grid {
 }
 
 .icones-redes a {
-    color: var(--verde-escuro);
-
+    color: var(--branco);
 }
 
 .icones-redes a:hover {
-    color: var(--verde-cnl);
+    color: var(--verde-pixelV);
 }
-#sobre p {
-    font-size: 20px;
-}
+
+/* ---------------------------Responsividade-----------------------------*/
 
 @media screen and (max-width: 1024px) {
 
     .titulo,
     .titulo h2 {
         font-size: 26px;
-        font-family: "Belleza", Recursive;
+        font-family: "Recursive", sans-linear-bold;
     }
 
     .menu {
@@ -547,11 +488,10 @@ footer .container-grid {
     #servicos .card svg {
         height: 55px;
     }
-
 }
 
+/* /------------------------- Menu Hamburguer --------------------------/ */
 
-/* ------------------------------------ Menu Hamburguer -------------------------------------- */
 #icone-barras,
 #icone-x {
     display: none;
@@ -561,7 +501,7 @@ footer .container-grid {
     display: none;
 }
 
-/* --------------------------------------------------------------------- */
+/* /----------------------------------------------------------------/ */
 
 @media screen and (max-width: 768px) {
     header {
@@ -590,6 +530,7 @@ footer .container-grid {
         flex-direction: column;
         justify-content: space-around;
         background-color: var(--preto);
+
         position: absolute;
         right: 0px;
         top: 165px;
@@ -624,17 +565,43 @@ footer .container-grid {
         gap: 20px;
     }
 
-    footer img {
+
+    footer img{
         height: 80px;
     }
 
-    .redes-sociais {
+    .redes-sociais{
         align-items: center;
         justify-content: center;
     }
 
-    .redes-sociais svg {
+
+    .redes-sociais svg{
         height: 35px;
     }
+}
 
+@media screen and (max-width: 320px){
+    nav.menu{
+        width: 260px;
+    }
+
+    header img{
+        width: 185px;
+    }
+
+    .conteudo-banner p{
+        font-size: 24px;
+        width: 310px;
+    }
+
+    .conteudo-banner ul{
+        font-size: 24px;
+
+    }
+
+    .titulo,
+    .titulo h2{
+        font-size: 20px;
+    }
 }

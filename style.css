@@ -5,18 +5,15 @@
 }
 
 @font-face {
-    font-family: "Recursive";
-    src: url(./fonts/Recursive-VariableFont_CASL\,CRSV\,MONO\,slnt\,wght.ttf);
+    font-family: "Belleza";
+    src: url(font/Belleza\,Recursive/);
 }
 
 :root {
     --branco: #FFFFFF;
     --preto: #000000;
-    --verde-pixelV: #00CF21;
-    --roxo-pixelV: #4700CF;
-    --Fundo-site: #F3F2F2;
-    --Contato: #E5E5E5;
-}
+    --verde-cnl: #9ED48F;
+    --verde-escuro: #64875B;}
 
 .container-grid {
     width: 80vw;
@@ -24,35 +21,14 @@
     margin: 0 auto;
 }
 
-body {
-    overflow-x: hidden;
-    background-color: var(--Fundo-site);
+
+.banner img{
+    height: 80px;
+    width: 234px;
 }
 
-.titulo {
-    display: flex;
-    font-family: "Recursive", sans-linear-bold;
-    font-weight: 600;
-    font-size: 35px;
-
-}
-
-.titulo h2 {
-    color: var(--branco);
-    margin-bottom: 0;
-    background-color: var(--roxo-pixelV);
-    border-radius: 20px;
-    padding: 10px 18px;
-
-}
-
-.titulo span {
-    color: var(--roxo-pixelV);
-    border-bottom: solid 3px var(--verde-pixelV);
-}
-
-.banner {
-    background-image: url(./imgs/Banner.png);
+.banner{
+   background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/banner.png) ;
     height: 120vh;
     background-repeat: no-repeat;
     background-position: 0 -10px;
@@ -66,13 +42,8 @@ header {
     height: 165px;
 }
 
-header img {
-    width: 234px;
-}
-
 header .container-grid {
     height: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,56 +54,46 @@ header .container-grid {
     width: 70%;
 
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-between;}
 
-.menu a {
+    .menu a {
     font-size: 20px;
     color: var(--branco);
-    font-family: "Recursive", sans-linear;
-
+    font-family: "Belleza", Recursive;
     text-decoration: underline transparent;
     text-decoration-thickness: 2px;
-
     transition: text-decoration 500ms ease;
 }
-
 .menu a:hover {
-    text-decoration-color: var(--verde-pixelV);
+    text-decoration-color: var(--branco);
 }
-
 .conteudo-banner {
     display: flex;
-    justify-content: space-evenly;
-    align-items: space-between;
-
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 }
 
-.conteudo-banner img {
-    max-width: 380px;
-    width: 50%;
-
-}
-
-.conteudo-banner p {
-    font-size: 26px;
-    font-family: "Recursive", sans-linear;
+.kemily {
     color: var(--branco);
-    width: 350px;
-    margin-bottom: 100px;
+    font-size: 40px;
+    font-family: "Belleza", Recursive;
 }
 
-.conteudo-banner ul {
-    font-size: 30px;
-    font-weight: 600;
-    font-family: "Recursive", sans-linear-bold;
-    color: var(--verde-pixelV);
-    list-style-type: none;
-    padding: 0;
+.agatha {
+color: #879E6D;
+font-size: 60px;
+font-family: "Belleza",Recursive;
 }
 
+.jorge {
+    color: var(--branco);
+    font-size: 25px;
+    font-family: "Belleza", Recursive;
+}
 
-/* -------------- SOBRE --------------- */
+/* -------sobre---------- */
 
 #sobre {
     display: flex;
@@ -141,49 +102,126 @@ header .container-grid {
     margin-top: 120px;
     margin-bottom: 120px;
 }
-
 #sobre img {
     max-width: 460px;
     width: 40%;
     border-radius: 40px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
 }
-
-#sobre p {
-    font-family: "Recursive", sans-linear;
-    font-size: 20px;
-    text-align: justify;
-    margin-top: 30px;
+#sobre h2 {
+    margin-right: 5px;
 }
 
+#sobre h2 {
 
-/* -------------PARALLAX--------------- */
-
-
-#parallax {
-    height: 250px;
-
-    /* background-image: url(./imgs/parallax.svg); */
-    background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./imgs/parallax.svg);
-    background-attachment: fixed;
-    background-size: 30%;
+    color: var(--branco);
+    margin-bottom: 0;
+    background-color: var(--verde-cnl);
+    border-radius: 20px;
+    padding: 10px 18px;
+}
+.titulo h2{
+    color: var(--branco);
+    margin-bottom: 0;
+    background-color: var(--verde-cnl);
+    border-radius: 20px;
+    padding: 10px 18px;
+}
+.titulo span {
+    color: var(--verde-cnl);
+}
+/* ---------- feitos------ */
+#feitos {
     margin-bottom: 120px;
 }
 
-/* ----------------SERVIÇOS--------------- */
+#feitoss .titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+#feitos h2 {
+    margin-left: 5px;
+    
+}
+
+.container-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#feitos .card {
+    width: 300px;
+    margin: 20px;
+    padding: 40px 20px;
+    border-radius: 40px;
+    background-color: #f3f2f2;
+    box-shadow: 0 4px 8px 0 lch(0% 0 0 / 0.2);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#feitos .card h3 {
+    font-size: 24px;
+    margin: 5px 0 30px;
+    color: var(--cnl);
+    font-family: "Belleza", Recursive;
+    text-align: center;
+}
+
+#feitos .card p {
+    font-family: "Belleza", Recursive;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#feitos .card svg {
+    color: var(--verde-cnl);
+    height: 75px;
+}
+
+#feitos .card:hover {
+    border: solid 3px var(--verde-escuro);
+}
+
+#feitos .card:hover h3 {
+    color: var(--verde-escuro);
+}
+
+#feitos .card:hover svg {
+    fill: var(--verde-escuro);
+}
+.FotosSite img{
+max-width: 460px;
+    width: 40%;
+    border-radius: 40px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    
+}
+
+
 #servicos {
     margin-bottom: 120px;
-
 }
 
 #servicos .titulo {
+    display: flex;
     justify-content: center;
     margin-bottom: 55px;
-
 }
 
-#servivos {
+#servicos h2 {
     margin-left: 5px;
+    
 }
 
 .container-cards {
@@ -194,95 +232,109 @@ header .container-grid {
 
     position: relative;
 }
-
-.linha-roxa {
-    position: absolute;
-    z-index: -1;
-    top: calc(50% - 125px);
-
-    height: 250px;
-    width: 100vw;
-    background: linear-gradient(0deg, rgba(36, 0, 105, 1)0%,
-            rgba(71, 0, 207, 1)100%);
-}
-
 #servicos .card {
     width: 300px;
     margin: 20px;
     padding: 40px 20px;
     border-radius: 40px;
-    background-color: #F2F2F2;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #f3f2f2;
+    box-shadow: 0 4px 8px 0 lch(0% 0 0 / 0.2);
     text-align: center;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 #servicos .card h3 {
     font-size: 24px;
     margin: 5px 0 30px;
-    color: var(--roxo-pixelV);
-    font-family: "Recursive", sans-linear-bold;
+    color: var(--preto);
+    font-family: "Belleza", Recursive;
     text-align: center;
-
 }
 
 #servicos .card p {
-    font-family: "Recursive", sans-linear;
-    font: size 18px;
+    font-family: "Belleza", Recursive;
+    font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.5;
-
 }
 
 #servicos .card svg {
-    color: var(--roxo-pixelV);
+    color: var(--preto);
     height: 75px;
-
 }
 
 #servicos .card:hover {
-    border: solid 3px var(--verde-pixelV);
+    border: solid 3px var(--verde-cnl);
 }
 
 #servicos .card:hover h3 {
-    color: var(--verde-pixelV);
+    color: var(--verde-cnl);
 }
 
 #servicos .card:hover svg {
-    fill: var(--verde-pixelV);
+    fill: var(--verde-cnl);
 }
 
-/* ------------Cases de Sucesso--------------*/
-
-#cases h2 {
-    margin-right: 5px;
-}
-
-#cases {
+.titulo{
+    font-size: 24px;
+    margin: 5px 0 30px;
+    color: var(--verde-cnl);
+    font-family: "Belleza", Recursive;
+    text-align: center;
+}.titulo{
     display: flex;
-    flex-direction: column;
+}
+.sobre span{
+    color: #000000;
+}
+.feitos{
+    display: flex;
+    justify-content: center;
+}
+
+.servicos{
+    display: flex;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin-bottom: 120px;
+    height: 100%;
+    
+}
+.feitos span{
+color: var(--branco);
+    margin-bottom: 0;
+    background-color: var(--verde-cnl);
+    border-radius: 20px;
+    padding: 10px 18px;
+}
+#servicos span{
+    color: #000000;
+}
+.conteudo-sobre span{
+    color: #000000;
+}
+.contato{
+    margin-bottom: 0;
+    background-color: var(--verde-cnl);
+    border-radius: 20px;
+    padding: 10px 18px;
 }
 
-#cases img {
+.card svg{
+  width: 60px;
+  height: 60px;
+}
+.fotos img{
     height: 300px;
-    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 30px;
 }
-
-#meuCarrossel {
-    max-width: 1170px;
-    width: 90;
-}
-
-/* ----------------------------- Contato -------------------------- */
-
 #contato {
     text-align: center;
     padding-bottom: 100px;
@@ -310,11 +362,11 @@ header .container-grid {
     align-items: center;
 
     border-radius: 40px;
-    background-color: var(--Contato);
-    border: solid 3px var(--roxo-pixelV);
+    background-color: var(--preto);
+    border: solid 3px var(--verde-escuro);
 
-    color: var(--preto);
-    font-family: "Recursive", sans-linear;
+    color: var(--branco);
+    font-family: "Belleza", Recursive;
     font-size: 17px;
 }
 
@@ -328,10 +380,13 @@ header .container-grid {
     justify-content: space-between;
 
     margin-bottom: 50px;
+
 }
 
 .campo-descricao {
     width: 60%;
+
+    text-align: left;
 
     display: flex;
     flex-direction: column;
@@ -368,14 +423,14 @@ header .container-grid {
     resize: none;
 }
 
-.campo-label,
+.campo-lable,
 .campo-descricao label {
     margin-bottom: 15px;
 }
 
 .campo input,
 .campo-descricao textarea {
-    font-family: "Recursive", sans liner;
+    font-family: "Belleza", Recursive;
     font-size: 17px;
 }
 
@@ -386,21 +441,21 @@ header .container-grid {
 
 .campo input:focus,
 .campo-descricao textarea:focus {
-    outline: 2px solid var(--verde-pixelV);
+    outline: 2px solid var(--branco);
 }
 
 #contato form button {
     height: 40px;
     width: 60%;
 
-    background-color: var(--roxo-pixelV);
+    background-color: var(--verde-cnl);
     color: var(--branco);
 
     border: none;
     border-radius: 4px;
 
     font-size: 17px;
-    font-family: "Recursive", sans-linear;
+    font-family: "Belleza", Recursive;
     font-weight: 700;
 
     text-transform: uppercase;
@@ -411,13 +466,16 @@ header .container-grid {
 }
 
 #contato form button:hover {
-    background-color: var(--verde-pixelV);
-}
+    background-color: var(--verde-cnl);
 
-/* ----------Footer------------- */
+}
+#contato span{
+    font-family: "Belleza" Recursive;
+    color: #000000;
+}
 footer {
     height: 250px;
-    background-image: url(./imgs/footer.png);
+    background-image: url(./img/superficie-abstrata-e-texturas-de-parede-de-pedra-branca-de-concreta.jpg);
 }
 
 footer img {
@@ -434,7 +492,6 @@ footer .container-grid {
 
 .redes-sociais {
     height: 50%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -442,9 +499,9 @@ footer .container-grid {
 }
 
 .redes-sociais p {
-    color: var(--branco);
+    color: var(--verde-escuro);
 
-    font-family: "Recursive", sans-linear-bold;
+    font-family: "Belleza", Recursive;
     font-size: 24px;
 }
 
@@ -456,21 +513,23 @@ footer .container-grid {
 }
 
 .icones-redes a {
-    color: var(--branco);
+    color: var(--verde-escuro);
+
 }
 
 .icones-redes a:hover {
-    color: var(--verde-pixelV);
+    color: var(--verde-cnl);
 }
-
-/* ---------------------------Responsividade-----------------------------*/
+#sobre p {
+    font-size: 20px;
+}
 
 @media screen and (max-width: 1024px) {
 
     .titulo,
     .titulo h2 {
         font-size: 26px;
-        font-family: "Recursive", sans-linear-bold;
+        font-family: "Belleza", Recursive;
     }
 
     .menu {
@@ -488,10 +547,19 @@ footer .container-grid {
     #servicos .card svg {
         height: 55px;
     }
+
 }
 
-/* /------------------------- Menu Hamburguer --------------------------/ */
+#parallax-2{
+    height: 250px;
 
+    background-image: url(./img/drone-aereo-vista-panoramica-de-uma-natureza-na-moldavia.jpg);
+
+    background: linear-gradient(rgba(0, 0, 0, 0.26)), url(./img/drone-aereo-vista-panoramica-de-uma-natureza-na-moldavia.jpg);
+    background-attachment: fixed;
+    background-size: 30%;
+    margin-bottom: 120px;
+}
 #icone-barras,
 #icone-x {
     display: none;
@@ -500,9 +568,6 @@ footer .container-grid {
 .menu-fechado {
     display: none;
 }
-
-/* /----------------------------------------------------------------/ */
-
 @media screen and (max-width: 768px) {
     header {
         position: relative;
@@ -518,7 +583,7 @@ footer .container-grid {
     }
 
     header svg {
-        fill: var(--branco);
+        fill: var(#FFFFFF);
     }
 
     nav.menu {
@@ -530,7 +595,6 @@ footer .container-grid {
         flex-direction: column;
         justify-content: space-around;
         background-color: var(--preto);
-
         position: absolute;
         right: 0px;
         top: 165px;
@@ -565,22 +629,20 @@ footer .container-grid {
         gap: 20px;
     }
 
-
-    footer img{
+    footer img {
         height: 80px;
     }
 
-    .redes-sociais{
+    .redes-sociais {
         align-items: center;
         justify-content: center;
     }
 
-
-    .redes-sociais svg{
+    .redes-sociais svg {
         height: 35px;
     }
-}
 
+}
 @media screen and (max-width: 320px){
     nav.menu{
         width: 260px;
@@ -594,10 +656,8 @@ footer .container-grid {
         font-size: 24px;
         width: 310px;
     }
-
     .conteudo-banner ul{
-        font-size: 24px;
-
+        font-size: 25px;
     }
 
     .titulo,

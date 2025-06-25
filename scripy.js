@@ -1,37 +1,41 @@
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.carrossel-slide');
-  const dots = document.querySelectorAll('.carrossel-dots .dot');
-  const prevBtn = document.querySelector('.carrossel-btn.prev');
-  const nextBtn = document.querySelector('.carrossel-btn.next');
-  let current = 0;
+//Selecionando elementos no HTML
+let menu = document.getElementById("menu")
+let iconeBarras = document.getElementById("icone-barras")
+let iconeX = document.getElementById("icone-x")
 
-  if (slides.length === 0 || dots.length === 0 || !prevBtn || !nextBtn) {
-    console.warn("Carrossel: elementos não encontrados.");
-    return;
-  }
+function abreFechaMenu() {
 
-  function showSlide(idx) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('ativo', i === idx);
-      dots[i].classList.toggle('ativo', i === idx);
-    });
-    current = idx;
-  }
+    //Se o menu está fechado 
+    if (menu.classList.contains("menu-fechado")) {
+        //Abrir o menu
+        menu.classList.remove("menu-fechado")
 
-  prevBtn.onclick = () => {
-    showSlide((current - 1 + slides.length) % slides.length);
-  };
+        //Mostrar icone X 
+        iconeX.style.display = "inline"
 
-  nextBtn.onclick = () => {
-    showSlide((current + 1) % slides.length);
-  };
+        //Esconder o icone barras
+        iconeBarras.style.display = "none"
+    }
 
-  dots.forEach((dot, i) => {
-    dot.onclick = () => showSlide(i);
-  });
+    else {
+        //Fechar o menu
+        menu.classList.add("menu-fechado")
 
-  // Inicializa o primeiro slide
-  showSlide(0);
-});
-</script>
+        //Esconder o icone X 
+        iconeX.style.display = "none"
+
+        //Mostrar icone barras
+        iconeBarras.style.display = "inline"
+    }
+
+}
+
+onresize = () => {
+    menu.classList.remove("menu-fechado")
+
+//Mostra o icone X
+iconeX.style.display = "inline"
+
+//Esconda o icone barras
+iconeBarras.style.display = "none"
+}
